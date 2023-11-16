@@ -6,6 +6,12 @@
     --blanco: #ffffff;
     --negro: #000000; 
     --nav: #1C1919;
+    --gris: #757575;
+    --transparente: rgba(34, 33, 33, 0.616);
+    --transparentes: rgba(184, 178, 178, 0.911);
+    --trans: rgba(0, 0, 0, 0.863) ;
+    --gold: #944949;
+
 }
 html{
     box-sizing: border-box;
@@ -16,7 +22,7 @@ html{
 }
 body{
     font-family: var(--FuenteParrafos);
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 2;
 }
 
@@ -56,7 +62,7 @@ h4{
     font-size: 2.8rem;
 }
 
-@media (max-width: 480px){
+@media (max-width: 768px){
     .a {
         text-decoration: none;
         }
@@ -97,7 +103,7 @@ h4{
 margin: 1rem;
 width: 13rem;
 }
-@media (min-width: 480px){
+@media (min-width: 768px){
     .header{
        display: flex;
        justify-content: left;
@@ -116,11 +122,11 @@ font-family: var(--FuenteParrafos);
 text-align: center;
 font-size: 1rem;
 }
-@media (max-width: 480px){
+@media (max-width: 768px){
     .footer__texto{
         font-family: var(--FuenteParrafos);
         text-align: center;
-        font-size: .8rem;
+        font-size: .70rem;
         }
 }
 /** Navegacion **/
@@ -131,7 +137,7 @@ gap: 2rem;
 }
 .navegacion__enlace{
 font-family: var(--fuenteHeading);
-color: var(--blanco);
+color: var(--negro);
 font-size: 1.5rem;
 }
 .navegacion__enlace--bajo{
@@ -141,7 +147,15 @@ font-size: 1.5rem;
     font-size: 1rem;
     text-decoration: underline;
     }
-    @media (max-width: 480px){
+    .icono{
+        display: flex;
+        justify-content: center;   
+    }
+    
+    .letras{
+        font-size: 1rem;
+    }
+    @media (max-width: 768px){
         .parte{
         display: none;
         }
@@ -159,9 +173,12 @@ font-size: 1.5rem;
             font-size: .8rem;
             text-decoration: underline;
             }
-    }
+            .icono{
+                display: none;  
+            } 
+ }
 .navegacion__enlace--activo,.navegacion__enlace:hover{
-    color: var(--primario);
+    color: var(--blanco);
 }
 
 /** Grid **/
@@ -170,7 +187,7 @@ font-size: 1.5rem;
     grid-template-columns: repeat(2, 1fr);   
     gap: 5rem;
 }
-@media (max-width:480px){
+@media (max-width:768px){
 .grid{
     grid-template-columns: repeat(1, 1fr);
 }
@@ -184,9 +201,7 @@ padding: 1rem;
 .producto__imagen{
 width: 100%;
 }
-.producto__informacion{
 
-}
 .producto__nombre{
 font-size: 1rem;
 }
@@ -199,3 +214,293 @@ font-size: 1.8rem;
     text-align: center;
     line-height: 1.2;
 }
+.textoss{
+    display: flex;
+    margin: 0 5rem 0.5rem 5rem ;
+    font-size: 1.60rem;
+}
+/** Contacto **/
+
+.formulario {
+  background-color: var(--transparente);
+  display: flex;
+  justify-content: center;
+  margin: 1rem;  
+  border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+    margin: 1rem;
+}
+.formulario legend {
+    text-align: center;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0rem;
+    color: var(--blanco);
+}
+@media (min-width: 1240px) {
+    .formulario {
+        background-color: var(--transparente);
+        display: flex;
+        justify-content: center;
+        margin: 1rem 10rem 1rem 10rem;
+        border-radius: 1rem;   
+    }
+    
+    .formulario fieldset {
+        border: none;
+        margin: 1rem;
+    }
+    .formulario legend {
+        text-align: center;
+        font-size: 2.25rem;
+        text-transform: uppercase;
+        font-weight: 700;   
+        color: var(--blanco);
+    }
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto 10rem ;
+        column-gap: 1rem;
+    }
+ 
+    .campo:nth-child(2){
+        grid-row:  2/ 3;
+    }
+    .campo:nth-child(3){
+        grid-row:  3/ 4;
+    }
+    .campo:nth-child(4){
+        grid-row:  1/ 4;
+    }
+
+    
+}
+.campo {
+    margin-bottom: .5rem;
+    margin: 1.2rem;
+    font-size: 1rem;
+}
+/**.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}**/
+.campo textarea {
+    height: 16rem;
+    height: 214px; width: 420px;
+
+}
+@media (min-width: 768px) {
+    .campo {
+        margin-bottom: .5rem;
+        margin: 1.2rem;
+        font-size: 1.44rem;
+    }
+    .campo textarea {
+        height: 16rem;
+        height: 214px; width: 420px;
+    }
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: .5rem;
+    border-radius: .5rem;
+    background-color: var(--transparentes);
+}
+.w-sm-100 {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .w-sm-100 {
+        width: auto;
+    }
+}
+.flex {
+    display: flex;
+}
+.alinear-derecha {
+    justify-content: center;
+
+}
+.boton {
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+.boton:hover {
+    cursor: pointer;
+}
+.bloques{
+    display: grid;
+    background-color: var(--transparente);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .bloques {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.comprar__titulo{
+    background-color: var(--transparente);
+    margin-top: 4rem;
+    font-size: 1.5rem;
+}
+
+/** Aviso y Terminos **/
+.nav2{
+     display: flex;
+     justify-content: center;
+     gap: 2rem;
+     background-color: var(--negro);    
+}
+.navegacion__enlace2{
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    font-size: 1.5rem;
+    }
+.ter{
+    background-image: url(../img/banner.jpg);
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/banner.jpg");
+}
+.leter{
+    padding: 1rem;
+    font-size: 2.25rem;
+    color: var(--blanco);
+}
+.inicio{
+    display: flex;
+    margin: 3rem 5rem 0.5rem 5rem ;
+    font-size: 1.25rem;
+}
+.titulo{
+        display: flex;
+        margin-left: 5rem;
+        margin-right: 5rem;
+        font-size: 2.25rem;
+
+}
+.texto{
+    display: flex;
+    margin: 0 5rem 0.5rem 5rem ;
+    font-size: 1.25rem;
+}
+.tituloss{
+    display: flex;
+    color: var(--negro);
+    margin: 2rem 5rem 0 5rem ;
+    font-size: 2.7rem;
+    
+}
+@media (max-width:768px){
+    .nav2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+        align-items: center;
+        }
+     .navegacion__enlace2{
+        font-family: var(--fuenteHeading);
+        color: var(--blanco);
+        font-size: 1rem;
+         }
+         .inicio{
+            display: flex;
+            margin: 3rem 5rem 0.5rem 5rem ;
+            font-size: .90rem;
+        }
+        .titulo{
+                display: flex;
+                margin-left: 5rem;
+                margin-right: 5rem;
+                font-size: 1.25rem;
+        
+        }
+        .texto{
+            display: flex;
+            margin: 0 5rem 0.5rem 5rem ;
+            font-size: .85rem;
+        }
+        .tituloss{
+            display: flex;
+            margin-left: 5rem;
+            margin-right: 5rem;
+            font-size: 1.5rem;
+    
+    }
+ }
+.navegacion__enlace2--activo,.navegacion__enlace2:hover{
+    color: var(--gold);
+}
+
+ /** Nosotros **/
+ .inicios{
+    display: flex;
+    margin: 3rem 5rem 0.5rem 5rem ;
+    font-size: 3.25rem;
+    color: var(--blanco);
+    justify-content: center;
+}
+ .titulos{
+    display: flex;
+    color: var(--blanco);
+    margin-left: 5rem;
+    margin-right: 5rem;
+    font-size: 2.25rem;
+
+}
+ .textos{
+    display: flex;
+    margin: 0 5rem 0.5rem 5rem ;
+    font-size: 1.25rem;
+    color: var(--blanco);
+}
+@media (max-width:768px){
+    .inicios{
+        display: flex;
+        margin: 3rem 5rem 0.5rem 5rem ;
+        font-size: 1.5em;
+        justify-content: center;
+    }
+    .titulos{
+        display: flex;
+        margin-left: 5rem;
+        margin-right: 5rem;
+        font-size: 1.25rem;
+
+}
+        .textos{
+            display: flex;
+            margin: 0 5rem 0.5rem 5rem ;
+            font-size: .85rem;
+        }
+ }
