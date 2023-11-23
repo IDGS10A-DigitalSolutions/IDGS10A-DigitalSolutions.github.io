@@ -293,7 +293,7 @@ font-size: 1.8rem;
 }**/
 .campo textarea {
     height: 16rem;
-    height: 215px; width: 206px;
+    height: 215px; width: 220px;
 
 }
 @media (min-width: 768px) {
